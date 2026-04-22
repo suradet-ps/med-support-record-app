@@ -2,7 +2,7 @@
 
 This project is a web application designed to record the value of medication support. It was developed to help pharmacists and medical personnel quickly log data, featuring a modern, user-friendly design that is responsive across all devices.
 
-## 🎉 Features
+## Features
 
 -   **Easy-to-Use Form Interface:** Designed for convenient and rapid data entry.
 -   **Real-time Data Saving:** Connects to a Supabase database, ensuring immediate data persistence.
@@ -10,20 +10,20 @@ This project is a web application designed to record the value of medication sup
 -   **Mobile-First Responsiveness:** The design adapts perfectly to various screen sizes, whether accessed on mobile, tablet, or desktop.
 -   **Notifications:** Utilizes SweetAlert2 to provide users with feedback on data saving results (success/failure).
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 -   **Frontend:** HTML5, CSS3 (Flexbox, Media Queries), JavaScript (ES6+)
 -   **Backend:** [Supabase](https://supabase.io/) (Database & Instant APIs)
 -   **Deployment:** [Firebase Hosting](https://firebase.google.com/docs/hosting)
 -   **Libraries:** [SweetAlert2](https://sweetalert2.github.io/)
 
-## 🏁 Getting Started (for Developers)
+## Getting Started (for Developers)
 
 If you wish to further develop this project, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/pharmacist-sabot/med-support-record-app.git
+    git clone https://github.com/suradet-ps/med-support-record-app.git
     ```
 
 2.  **Navigate to the project directory:**
@@ -37,10 +37,10 @@ If you wish to further develop this project, follow these steps:
 
 4.  **Open `index.html` in your browser to start using the application.**
 
-## ✍️ Author
+## Author
 
 -   Pharm. Suradet Prathomsak
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
