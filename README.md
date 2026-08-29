@@ -1,46 +1,126 @@
 # Medication Support Record System
 
-This project is a web application designed to record the value of medication support. It was developed to help pharmacists and medical personnel quickly log data, featuring a modern, user-friendly design that is responsive across all devices.
+```
+███╗   ███╗███████╗██████╗  ██████╗██╗   ██╗██████╗ ██████╗  ██████╗ ██████╗ ████████╗
+████╗ ████║██╔════╝██╔══██╗██╔════╝██║   ██║██╔══██╗██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝
+██╔████╔██║█████╗  ██║  ██║███████╗██║   ██║██████╔╝██████╔╝██║   ██║██████╔╝   ██║
+██║╚██╔╝██║██╔══╝  ██║  ██║╚════██║██║   ██║██╔═══╝ ██╔═══╝ ██║   ██║██╔══██╗   ██║
+██║ ╚═╝ ██║███████╗██████╔╝██████╔╝╚██████╔╝██║     ██║     ╚██████╔╝██║  ██║   ██║
+╚═╝     ╚═╝╚══════╝╚═════╝ ╚═════╝ ╚═════╝ ╚═╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝
+```
 
-## Features
+---
 
--   **Easy-to-Use Form Interface:** Designed for convenient and rapid data entry.
--   **Real-time Data Saving:** Connects to a Supabase database, ensuring immediate data persistence.
--   **Engaging Animations:** The save button includes animations for an enhanced user experience.
--   **Mobile-First Responsiveness:** The design adapts perfectly to various screen sizes, whether accessed on mobile, tablet, or desktop.
--   **Notifications:** Utilizes SweetAlert2 to provide users with feedback on data saving results (success/failure).
+## ◆ PULSE
 
-## Tech Stack
+Support medication values are quick to log and even quicker to lose in a
+notebook. This is the record system for the numbers that matter to the
+pharmacy budget: a form built for rapid data entry, a Supabase
+database that persists the instant the button is pressed, and
+feedback that says so - success or failure, announced, never silent.
+Mobile-first, pastel-calm, and ready on every screen the pharmacist
+carries.
 
--   **Frontend:** HTML5, CSS3 (Flexbox, Media Queries), JavaScript (ES6+)
--   **Backend:** [Supabase](https://supabase.io/) (Database & Instant APIs)
--   **Deployment:** [Firebase Hosting](https://firebase.google.com/docs/hosting)
--   **Libraries:** [SweetAlert2](https://sweetalert2.github.io/)
+| Form ▣ | Real-time ▣ | Feedback ▣ | Mobile ▣ |
+|---|---|---|---|
 
-## Getting Started (for Developers)
+*The record loop - enter, save, confirm - is sealed.*
 
-If you wish to further develop this project, follow these steps:
+> Built with vanilla HTML, CSS, and JavaScript, backed by Supabase,
+> shipped from Firebase Hosting - the dependency count is the feature.
+>
+> **suradet-ps**, artifact keeper
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/suradet-ps/med-support-record-app.git
-    ```
+---
 
-2.  **Navigate to the project directory:**
-    ```bash
-    cd med-support-record-app
-    ```
+## ◆ IGNITION
 
-3.  **Supabase Setup:**
-    -   This project requires a Supabase API Key and a private URL for connection.
-    -   You must create a project on [Supabase](https://supabase.io/) and insert your `SUPABASE_URL` and `SUPABASE_ANON_KEY` into the `config.js` file (or whichever file you use for connection management) to enable data saving.
+One clone, zero build step.
 
-4.  **Open `index.html` in your browser to start using the application.**
+```
+⟫ git clone https://github.com/suradet-ps/med-support-record-app.git
+⟫ cd med-support-record-app
+```
 
-## Author
+Set `SUPABASE_URL` and `SUPABASE_ANON_KEY` in `config.js`, then open
+`index.html` in a browser. That is the whole ritual - no bundler, no
+install, no server of your own.
 
--   Pharm. Suradet Prathomsak
+<details>
+<summary>Environment</summary>
 
-## License
+- A [Supabase](https://supabase.io/) project with its API key and
+  project URL
+- Firebase Hosting for deployment (`firebase.json` included)
 
-This project is licensed under the MIT License.
+</details>
+
+---
+
+## ◆ ANATOMY
+
+One page, one save, an honest confirmation.
+
+- **Enters** - the form is built for rapid entry: the fields a
+  pharmacist types during a shift, not a survey.
+- **Saves** - every submission reaches Supabase immediately - the
+  record exists the moment the button is pressed, not at the end of
+  the month.
+- **Confirms** - SweetAlert2 announces the outcome: success or
+  failure, with the kind of feedback a busy user cannot afford to
+  miss.
+- **Responds** - Flexbox and media queries carry the form from phone
+  to tablet to desktop - the entry point follows the user's screen.
+- **Wears** - a pastel yellow redesign keeps the page calm for the
+  hours it is used - utility with a quieter face.
+
+---
+
+## ◆ RITUALS
+
+**The core ceremony** - the daily log:
+
+1. Open the page - from the phone, the tablet, or the desktop.
+2. Enter the support value; the form accepts it in seconds.
+3. Save. Supabase answers instantly; SweetAlert2 confirms.
+4. Move on. The record is already in the database, and the month's
+   total is one query away.
+
+**The ceremony of the instant save** - the number is persisted when
+the button is pressed, not when the shift ends. A forgotten save is a
+missing record; the database removes the remembering from the ritual.
+
+**The ceremony of the told result** - every save is announced: success
+or failure, never silence. A user who does not know whether the save
+landed is a user who will save twice or not at all.
+
+---
+
+## ◆ ECHOES
+
+**Where this artifact is heading**
+
+```
+enter    ▸ rapid-entry form interface ──────────────────────────────── ▸ sealed
+save     ▸ Supabase instant persistence ────────────────────────────── ▸ sealed
+confirm  ▸ SweetAlert2 feedback, success and failure ───────────────── ▸ sealed
+respond  ▸ mobile-first layouts across screens ─────────────────────── ▸ sealed
+```
+
+**Raising the artifact** - the connection logic lives in `config.js`;
+the styles in `style.css`; the behavior in `script.js`. Open an issue
+first to discuss a change.
+
+**Status** - dependencies are maintained through Renovate; releases
+deploy to Firebase Hosting.
+
+---
+
+```
+  ─────────────────────────────────────────
+   A value logged late is a value
+   half-remembered.
+  ─────────────────────────────────────────
+```
+
+Licensed under the [MIT License](LICENSE).
